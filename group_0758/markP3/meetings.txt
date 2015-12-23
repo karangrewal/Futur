@@ -1,0 +1,148 @@
+November 6, 2015
+Members present: Alexander, Oliver (Ho), Karan. It was a short meeting planned off schedule, so Elisha was unable to be here.
+
+Current state of the project:
+- Discussed and created an agreements.txt file, agreeing on communications methods, timeframe, etc.
+
+Tasks for this weekend:
+- Agree to the file (each member).
+- Meet on Tuesday to merge class designs and assign preliminary roles to everyone. Karan has stated that he cannot be there, so Alex will discuss their implementation on behalf of him.
+
+November 10, 2015
+Members present: Alexander, Oliver (Ho), Elisha. Karan was unable to attend.
+
+Duration: 12:30-2:20
+
+Current state of the project:
+- merged CRC designs (Elisha will type up new CRC and commit crc.pdf)
+
+Tasks for this week
+Elisha:
+- finalize merged design. Upload crc.pdf.
+- Implement a user sort method
+- Implement a user search flights method
+Oliver
+- Implement Client
+- Implement Client info class
+- Implement User upload personal/booking info to be stored as new Client (maybe? figure out)
+Alex
+- Implement Itinerary
+- Figure out a design for search
+- Implement User view client info (and figure out meaning)
+Karan
+- Implement Flight
+- Implement Flight Info class
+- Implement user upload flight (and figure out details)
+
+November 12, 2015
+Members present: All members
+
+Duration: 4:00-6:15
+
+Current state of the project:
+- began implementing most classes. Itinerary and Flight is currently committed. 
+- discussed and finalized package organization
+- discussed implementing an abstract Trip class, and providing helper functions.
+Tasks for this weekend
+- complete implementation from the week.
+- Include Exceptions for whenever Clients or Flights cannot be found. Each exception should be stored in the relevant package (ClientNotFoundException, for example, in Users)
+
+November 16, 2015
+Members present: All members
+
+Duration: 12:30-2:00
+
+Current state of the project:
+- Most functionality is implemented.
+- Need to clean code. Need to finalize and figure out file structure for clients.txt and flights.txt.
+- Need to code a “upload Client/Flight info from a source file” method for User that references Client or Flight Information.
+Tasks for today/tomorrow:
+- finalize code, implement into Driver. Debug and use the JUnit tests. 
+
+————————-
+Phase III
+————————-
+November 23, 2015
+Members present: all members
+Duration: 12:00-2:00
+
+Notes:
+- Update Flight/ClientInformation to Flight/ClientManager
+- Will meet Saturday 10am-1pm to discuss implementing the app prototype. Will work on features list until then.
+- Deal with finalizing CRC.pdf later.
+- Discussed a csv format for username/password. username,password,a/c?
+- Discussed how to store booked itineraries in csv format. Could include booked itineraries as the last csv part of a client, could process it to separate into itineraries (perhaps based on some symbol like .) and could then process each itinerary into flight numbers (perhaps separated by -).
+
+Individual Tasks before next meeting:
+Elisha: 
+- Client can view own billing/personal info. Admin can view any given Client’s billing/personal info (use Client’s own method).
+- Client can edit own billing/personal info. Admin can edit any given Client’s billing/personal info (use Client’s own method). Already have implementation in ClientInformation/UserManager.
+- User saveData method. A central method that should write the Flight info, Client info (which we have implementations of). Assuming we don’t need to save usernames and passwords.
+-Figure out about username/password. Does creating new Clients add new username/password combos. Can we use Client emails as the username?
+
+Oliver:
+- ASAP: change “editClientPersonalInfo” into “editClientInfo” or something.
+- ASAP: change ClientInformation -> UserManager. Change Information -> Manager. Make sure no project-wide errors arise (make sure to update all calls to the classes).
+- Regarding uploadClientInfo -> make sure that the method works to additively upload multiple files (eg. if files are uploaded sequentially, you end up with an aggregate of all files’ info) and that uploading a Client email twice would update the info to the newer ClientUpload.
+- Transfer any user method to uploadClientInfo to the admin, since only the admin can do it.
+
+Karan:
+- ASAP: Change “FlightInformation” -> “FlightManager”. 
+- Make sure that the uploadFlightInfo method is designed as needed and that the method works to additively upload multiple files (eg. if files are uploaded sequentially, you end up with an aggregate of all files’ info) and that uploading a Flight number twice would update the info to the newer Flight since there can only be one flight with each number.
+- Move the User call to uploadFlightInfo to Admin since only an admin can do this.
+- Think about how usernames and passwords will be stored in relation to Clients (and the fact that usernames and passwords can belong to Admins, who aren’t Clients).
+
+Alex:
+- Admin can edit info for a flight.
+- User can select displayed itinerary for booking (using index).
+- Client can book itinerary. Admin can for any Client.
+- Client can view booked itineraries. Admin can for any Client.
+- Figure how to store and manage booked itineraries (eg. do we give them to clients upon construction).
+
+
+November 28, 2015
+Members present: All members
+Duration: 11:00-3:00
+
+Notes:
+- Worked on adding numSeats and working out various implementations while coding collaboratively. 
+- Updated Driver and SampleTests. Tests pass, except the expected string for flights does not include the numSeats, so posted on Piazza to resolve that.
+- Get Clients methods necessary?
+- NOTE: Found that there were problems with accessing different managers for individual users. This should be fine in practise, since only one user will be operating at a time and they will be constantly updating the stored txts. Could be problematic when using an client to edit client info then an admin to access that info, since the admin and client will both have independent sets of managers. However, it does work when the admin edits the client and then accesses the client, since this all happens in the administrator’s managers. Need to coordinate carefully to read and write to synchronize everything.
+- Got a working front end for searching for flights.
+
+To do:
+- Figure out where we want to catch the exceptions, so they never crash the app. Ie. SearchTool should not throw exceptions if clients or flights are not found!!!!!
+- Comb through code to clean up, handle exceptions. Take a look at the notes and deal with some concerns.
+- Elisha: Figure out what to commit for the app itself.
+- Refine demo, such as display results.
+- Alex: follow up piazza/email questions.
+- Things are looking good, good job team :)!
+
+December 1, 2015
+Members present: All members
+Duration: 2:00-4:00
+
+Notes:
+- (Karan) Taking care of search results displaying on the app
+- (Elisha) Work on log in activity.
+- Figured out solution to the App search flight error.
+- (Alex) Look into if you can run the same activity for different users with different drawn states.
+- (Alex) Redo the 
+- Generally, have to discuss Android state from Facebook messenger
+
+- Ready for the demo tomorrow!
+
+December 3, 2015
+Members present: All members
+Duration: 4:00-5:30
+
+Notes:
+- Worked on different activities, discussed what activities could be shared between the admin and client. Ultimately, it was more of a work session than a meeting.
+
+December 5, 2015
+Members present: All members
+Duration: 3:00-5:30
+
+Notes:
+- Another work session. Began implementing Client menu and features.

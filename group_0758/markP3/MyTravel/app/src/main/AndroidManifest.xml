@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.csc207.group0758.mytravel">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".AdminMenuActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlightMenuActivity"
+            android:label="@string/title_activity_flight_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlightSearchActivity"
+            android:label="@string/title_activity_flight_search"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LogInActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ItineraryMenuActivity" />
+        <activity android:name=".ItinerarySearchActivity" />
+        <activity
+            android:name=".RetrieveClientActivity"
+            android:label="@string/title_activity_retrieve_client_menu"
+            android:parentActivityName=".AdminMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AdminMenuActivity" />
+        </activity>
+        <activity android:name=".AdminBookingActivity" />
+        <activity android:name=".ViewBookedItinActivity" />
+        <activity
+            android:name=".ClientMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlightActivity"
+            android:label="@string/title_activity_flight"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RetrieveFlightActivity"
+            android:label="@string/title_activity_retrieve_flight"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EditClientActivity" />
+        <activity android:name=".EditFlightActivity" />
+        <activity android:name=".UploadFlightActivity" />
+        <activity android:name=".UploadClientActivity"></activity>
+    </application>
+
+</manifest>

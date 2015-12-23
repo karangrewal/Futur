@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.csc207.group0758.mytravel.FlightMenuActivity"
+    tools:showIn="@layout/activity_flight_menu">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Flights"
+        android:textSize="50dp"
+        android:id="@+id/title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Origin"
+        android:textSize="20dp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="40dp"
+        android:id="@+id/from" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destination"
+        android:textSize="20dp"
+        android:layout_below="@+id/origin"
+        android:layout_marginTop="10dp"
+        android:id="@+id/to"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/destination"
+        android:id="@+id/date_description"
+        android:text="Departure Date"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="e.g. Boston"
+        android:width="250dp"
+        android:layout_gravity="left|center_vertical"
+        android:layout_below="@+id/to"
+        android:id="@+id/destination" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="e.g. Toronto"
+        android:width="250dp"
+        android:layout_gravity="left|center_vertical"
+        android:id="@+id/origin"
+        android:layout_below="@+id/from"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_description"
+        android:width="150dp"
+        android:hint="YYYY-MM-DD"
+        android:id="@+id/date"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/date"
+        android:layout_marginTop="10dp"
+        android:onClick="searchFlights"/>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyTravel</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_flight_menu">FlightMenuActivity</string>
+    <string name="title_activity_flight_search">FlightSearchActivity</string>
+    <string name="title_activity_view_and_edit_info">viewAndEditInfo</string>
+    <string name="title_activity_retrieve_client_menu">RetrieveClientMenu</string>
+    <string name="title_activity_edit_info">editInfo</string>
+    <string name="title_activity_client_menu">ClientMenu</string>
+    <string name="title_activity_add_flight">AddFlightActivity</string>
+    <string name="title_activity_flight">Flight</string>
+    <string name="title_activity_retrieve_flight">Retrieve Flight</string>
+</resources>
